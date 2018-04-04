@@ -14,7 +14,7 @@ public class FileService {
 
 
     public List<FileMetaData> findAllFiles() throws IOException {
-       return Files.lines(Paths.get("/Users/min/Desktop/metadata")).map(line->{
+       return Files.lines(Paths.get("/Users/max/Desktop/metadata")).map(line->{
            FileMetaData fileMetaData=new FileMetaData();
            fileMetaData.setId(Integer.parseInt(line.split("%%")[0]));
            fileMetaData.setFileName(line.split("%%")[1]);
