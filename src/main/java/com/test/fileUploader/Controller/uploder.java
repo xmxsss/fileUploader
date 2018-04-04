@@ -24,7 +24,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 @RestController
 public class uploder {
 public List<String> getId() throws IOException{
-    return Files.lines(Paths.get("/Users/min/Desktop/metadata")).map(line->line.split("%%")[0]).collect(Collectors.toList());
+    return Files.lines(Paths.get("/Users/max/Desktop/metadata")).map(line->line.split("%%")[0]).collect(Collectors.toList());
 }
 
     AtomicInteger id;
@@ -73,7 +73,7 @@ public List<String> getId() throws IOException{
     }
     @GetMapping("/downLoad/{filename}")
     public void downLoadFile(HttpServletResponse response,@PathVariable String filename)throws IOException{
-        String path = "/Users/min/Desktop/down/"+f.findFilesByFileName(filename).getFileName();
+        String path = "/Users/max/Desktop/down/"+f.findFilesByFileName(filename).getFileName();
         File file = new File(f.findFilesByFileName(filename).getPath());
         String mimeType= "application/octet-stream";
         response.setContentType(mimeType);
