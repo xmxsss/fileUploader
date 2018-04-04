@@ -11,8 +11,8 @@ import java.nio.file.StandardOpenOption;
 
 @Service
 public class UploaderService {
-    private static String upload_folder="/Users/min/Desktop/files/";
-    private static String metadata = "/Users/min/Desktop/metadata";
+    private static String upload_folder="/Users/max/Desktop/files/";
+    private static String metadata = "/Users/max/Desktop/metadata";
     public void saveUploadFiles(MultipartFile file) throws IOException {
 
             byte[] bytes=file.getBytes();
